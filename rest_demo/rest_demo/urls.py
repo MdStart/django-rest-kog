@@ -11,7 +11,6 @@ router.register(r'posts', views.PostViewSet)
 
 urlpatterns = patterns('',
     # Examples:
-    url(r'^', include(router.urls)),
     # url(r'^$', 'rest_demo.views.home', name='home'),
     # url(r'^rest_demo/', include('rest_demo.foo.urls')),
 
@@ -19,5 +18,8 @@ urlpatterns = patterns('',
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
     # Uncomment the next line to enable the admin:
+    url(r'^', include(router.urls)),
     url(r'^admin/', include(admin.site.urls)),
+    url(r'api-docs/', include('rest_framework_swagger.urls')),
+    url(r'api-docs-plain/', include('rest_framework_docs.urls')),
 )

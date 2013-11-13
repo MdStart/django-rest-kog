@@ -126,6 +126,8 @@ INSTALLED_APPS = (
     # 'django.contrib.admindocs',
     'rest_framework',
     'rest_demo.demo',
+    'rest_framework_swagger',
+    'rest_framework_docs',
 )
 
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'
